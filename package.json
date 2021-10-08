@@ -1,0 +1,80 @@
+{
+  "name": "textpub",
+  "version": "1.0.2",
+  "homepage": "https://textpub.herokuapp.com/",
+  "private": true,
+  "description": "Advanced Textpub with format, font, image, video, url",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sushilldhakal/textpub.git"
+  },
+  "scripts": {
+    "start": "node index",
+    "eslint": "eslint ./ --ext=js --ext=jsx",
+    "eslint:fix": "eslint ./ --ext=js --ext=jsx --fix",
+    "eslint:server": "eslint ./index.js ./server/",
+    "eslint:server:fix": "eslint ./index.js ./server/ --fix",
+    "eslint:client": "eslint ./client/",
+    "eslint:client:fix": "eslint ./client/ --fix"
+  },
+  "dependencies": {
+    "babel-plugin-dynamic-import-node": "^1.2.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "body-parser": "~1.18.2",
+    "compression": "^1.7.2",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "dotenv": "^5.0.1",
+    "express": "~4.15.5",
+    "helmet": "^3.12.0",
+    "mongoose": "^5.0.12",
+    "morgan": "~1.9.0",
+    "socket.io": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.1"
+  },
+  "author": {
+    "name": "sushilldhakal",
+    "email": "sushilldhakal@gmail.com",
+    "url": "https://github.com/sushilldhakal"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sushilldhakal/textpub/issues"
+  },
+  "engines": {
+    "node": ">=6.10.0",
+    "npm": ">=3.10.8"
+  },
+  "contributors": ["sushilldhakal"],
+  "icon": "./public/favicon.ico",
+  "keywords": [
+    "textpub",
+    "advanced textpub",
+    "docs",
+    "react",
+    "heroku",
+    "mlab",
+    "mongodb",
+    "mongo",
+    "socket.io",
+    "scoket",
+    "link",
+    "image",
+    "video",
+    "url",
+    "format",
+    "realtime"
+  ]
+}
