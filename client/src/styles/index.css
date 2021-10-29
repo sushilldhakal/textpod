@@ -1,0 +1,78 @@
+/**
+|--------------------------------------------------
+| You can add and/or custom your global variable here
+|--------------------------------------------------
+*/
+/**
+|--------------------------------------------------
+| You can add or/and custom your mixins here
+|--------------------------------------------------
+*/
+/**
+|--------------------------------------------------
+| You can add or/and custom your global classes here
+|--------------------------------------------------
+*/
+.fontNunito {
+  font-family: "Nunito", sans-serif;
+}
+
+.fontExtraSmall {
+  font-size: 0.7rem;
+}
+
+.fontSmall {
+  font-size: 0.8rem;
+}
+
+.fontNormal {
+  font-size: 1rem;
+}
+
+.fontMedium {
+  font-size: 1.2rem;
+}
+
+.fontLarge {
+  font-size: 1.5rem;
+}
+
+.fontExtraLarge {
+  font-size: 2rem;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.cursorNotAllowed {
+  cursor: not-allowed;
+}
+
+.cursorCrosshair {
+  cursor: crosshair;
+}
+
+/**
+|--------------------------------------------------
+| You can style your app here
+|--------------------------------------------------
+*/
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Nunito", sans-serif;
+  color: white;
+  background-color: #390318;
+}
+
+.Editor .editor {
+  margin: 0 80px;
+}

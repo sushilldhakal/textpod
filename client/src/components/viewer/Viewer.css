@@ -1,0 +1,33 @@
+/**
+|--------------------------------------------------
+| You can add and/or custom your global variable here
+|--------------------------------------------------
+*/
+.Viewer {
+  height: 100%;
+  min-height: 100vh;
+  background-color: white;
+  padding: 15px; }
+  .Viewer .btn {
+    background-color: #ca0b54;
+    color: white;
+    border-radius: 50%;
+    transition: 0.1s ease-out;
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    font-weight: 900;
+    outline: none;
+    border: none;
+    cursor: pointer; }
+    .Viewer .btn:hover {
+      background-color: #b8072d; }
+  .Viewer .btn-fixed {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 999999; }
+  .Viewer .wrapper-view {
+    color: #131313;
+    z-index: 10000;
+    padding: 10px; }

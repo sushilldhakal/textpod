@@ -1,0 +1,74 @@
+/**
+|--------------------------------------------------
+| You can add and/or custom your global variable here
+|--------------------------------------------------
+*/
+.Editor .editor {
+  line-height: 1.1em; }
+
+.Editor .header {
+  background-color: white;
+  width: 96%;
+  margin: auto;
+  padding: 6px 0px;
+  width: 100%; }
+  .Editor .header .header-wrapper-left {
+    height: 100%;
+    display: flex;
+    flex-direction: row; }
+    .Editor .header .header-wrapper-left .wrapper-logo {
+      margin-right: 20px;
+      height: 100%;
+      flex: 0; }
+    .Editor .header .header-wrapper-left .wrapper-input {
+      height: 100%;
+      flex: 1; }
+      .Editor .header .header-wrapper-left .wrapper-input input {
+        border: none;
+        outline: none;
+        font-size: 16px;
+        font-family: "Nunito", sans-serif;
+        max-width: 100%;
+        min-width: 240px;
+        margin-right: 20px;
+        height: 100%; }
+        .Editor .header .header-wrapper-left .wrapper-input input::placeholder {
+          font-style: italic !important;
+          color: #606060; }
+  .Editor .header .state {
+    color: #606060;
+    height: 100%;
+    padding-top: 6px; }
+  .Editor .header .options {
+    text-align: right; }
+    .Editor .header .options .btn {
+      padding: 5px 16px;
+      background-color: #ca0b54;
+      font-size: 14px;
+      outline: none;
+      border: 1.5px #ca0b54 solid;
+      border-radius: 36px;
+      font-family: "Nunito", sans-serif;
+      font-weight: 900;
+      color: white;
+      cursor: pointer; }
+      .Editor .header .options .btn i.fa {
+        margin-right: 8px; }
+      .Editor .header .options .btn:hover {
+        background-color: white;
+        color: #ca0b54; }
+    .Editor .header .options .badge {
+      margin-right: 25px;
+      height: 100%;
+      font-size: 16px;
+      text-align: center; }
+      .Editor .header .options .badge span.number {
+        margin-right: 4px;
+        background-color: #ca0b54;
+        color: white;
+        border-radius: 50%;
+        padding: 6px 12px;
+        font-weight: 900; }
+      .Editor .header .options .badge span.text {
+        color: #606060;
+        font-style: italic; }

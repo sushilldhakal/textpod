@@ -87,6 +87,19 @@
       rel="stylesheet"
       href="%PUBLIC_URL%/lib/froala-editor/css/custom-theme.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tui-image-editor@3.2.2/dist/tui-image-editor.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://uicdn.toast.com/tui-color-picker/latest/tui-color-picker.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="%PUBLIC_URL%/lib/froala-editor/css/image_tui.min.css"
+    />
   </head>
 
   <body>
@@ -113,7 +126,28 @@
     <!-- Froala Editor -->
     <script src="%PUBLIC_URL%/lib/froala-editor/js/froala_editor.pkgd.min.js"></script>
     <!-- Plugins -->
-    <!-- <script src="%PUBLIC_URL%/lib/froala-editor/js/plugins/line_height.min.js"></script> -->
-    <!-- <script src="%PUBLIC_URL%/lib/froala-editor/js/plugins/spell_checker.min.js"></script> -->
+    <script src="%PUBLIC_URL%/lib/froala-editor/js/plugins/line_height.min.js"></script>
+    <script src="%PUBLIC_URL%/lib/froala-editor/js/plugins/spell_checker.min.js"></script>
+
+    <script src="%PUBLIC_URL%/lib/froala-editor/js/plugins/image.min.js"></script>
+
+    <script src="%PUBLIC_URL%/lib/froala-editor/js/plugins/video.min.js"></script>
+    <script src="%PUBLIC_URL%/lib/froala-editor/js/plugins/inline_style.min.js"></script>
+
+    <script src="%PUBLIC_URL%/lib/froala-editor/js/plugins/image_tui.min.js"></script>
+
+    <script src="%PUBLIC_URL%/lib/froala-editor/js/plugins/filesManager.min.js"></script>
+
+    <script type="javascript">
+      new FroalaEditor('div#froala-editor', {
+        dragInline: false,
+        toolbarInline: true,
+        charCounterCount: false,
+        embedlyEditButtons: [],
+        fileAllowedTypes: ['application/pdf', 'application/msword'],
+        imageAllowedTypes: ['jpeg', 'jpg', 'png'],
+        pluginsEnabled: ['image', 'link', 'draggable']
+      })
+    </script>
   </body>
 </html>

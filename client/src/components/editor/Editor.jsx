@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
-import FroalaEditor from 'react-froala-wysiwyg';
-import io from 'socket.io-client';
-import conf from '../../config';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { withRouter } from "react-router-dom";
+import { connect } from "react-redux";
+import FroalaEditor from "react-froala-wysiwyg";
+import io from "socket.io-client";
+import conf from "../../config";
 
-import './Editor.css';
+import "./Editor.css";
 
-import { getLastTimeString } from '../../utils/DateTime';
-import { config as configFrolaEditor } from '../../utils/FroalaWysiwyg';
-import * as msg from '../../utils/Messages';
+import { getLastTimeString } from "../../utils/DateTime";
+import { config as configFrolaEditor } from "../../utils/FroalaWysiwyg";
+import * as msg from "../../utils/Messages";
 
-import * as actions from '../../redux/actions';
+import * as actions from "../../redux/actions";
 
 const socket = io();
 
@@ -23,10 +23,10 @@ class Editor extends Component {
     document.title = msg.EMPTY_DOC;
 
     this.state = {
-      title: '',
+      title: "",
       usersInRoom: 0,
-      stateModel: '',
-      path: '',
+      stateModel: "",
+      path: ""
     };
 
     /** Flag checking if user changed file first */
@@ -89,7 +89,7 @@ class Editor extends Component {
     this.setState({ stateModel: msg.SAVING });
     socket.emit(conf.socket.client.modelChanged, {
       model,
-      room: this.room,
+      room: this.room
     });
   };
 
@@ -101,7 +101,7 @@ class Editor extends Component {
     this._updateTitle(title);
     socket.emit(conf.socket.client.titleChanged, {
       title,
-      room: this.room,
+      room: this.room
     });
   };
 
@@ -143,7 +143,7 @@ class Editor extends Component {
                       defaultValue={this.state.title}
                       onChange={(ev) => this._onChangeTitle(ev.target.value)}
                       onKeyPress={(ev) => {
-                        if (ev.key === 'Enter') this._onNavigate();
+                        if (ev.key === "Enter") this._onNavigate();
                       }}
                     />
                   </div>
@@ -160,11 +160,11 @@ class Editor extends Component {
                     <span className="badge">
                       <span className="number">{this.state.usersInRoom}</span>
                       <span className="text">
-                        other{this.state.usersInRoom > 1 ? 's' : ''} online
+                        other{this.state.usersInRoom > 1 ? "s" : ""} online
                       </span>
                     </span>
                   ) : (
-                    ''
+                    ""
                   )}
                   <button className="btn" onClick={this._navigateToViewer}>
                     <span>
@@ -181,6 +181,7 @@ class Editor extends Component {
         <div className="editor">
           <FroalaEditor
             tag="textarea"
+            id="froala-editor"
             model={this.props.model}
             config={configFrolaEditor}
             onModelChange={this._onChangeModel}
@@ -194,22 +195,22 @@ class Editor extends Component {
 Editor.propTypes = {
   model: PropTypes.string,
   editModel: PropTypes.func,
-  history: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired
 };
 
 Editor.defaultProps = {
-  model: '',
-  editModel: () => {},
+  model: "",
+  editModel: () => {}
 };
 
 const mapStateToProps = (state) => ({
-  model: state.Model,
+  model: state.Model
 });
 
 const mapDispatchToProps = (dispatch) => ({
   editModel: (model) => {
     dispatch(actions.editModel(model));
-  },
+  }
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Editor));
